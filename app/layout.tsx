@@ -2,6 +2,7 @@ import type React from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,6 +10,10 @@ export const metadata = {
   title: "Sourav Ramesh | Mobile App Developer",
   description:
     "A minimalist portfolio showcasing my React Native apps and development projects.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   metadataBase: new URL("https://souravramesh.com"),
   openGraph: {
     title: "Sourav Ramesh | Mobile App Developer",
@@ -36,6 +41,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>{children}</ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
