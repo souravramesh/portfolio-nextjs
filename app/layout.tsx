@@ -9,12 +9,12 @@ export const metadata = {
   title: "Sourav Ramesh | Mobile App Developer",
   description:
     "A minimalist portfolio showcasing my React Native apps and development projects.",
-  metadataBase: new URL("https://portfolio-nextjs-phi-indol.vercel.app"),
+  metadataBase: new URL("https://souravramesh.com"),
   openGraph: {
     title: "Sourav Ramesh | Mobile App Developer",
     description:
       "Explore my portfolio featuring React Native apps and development projects.",
-    url: "https://portfolio-nextjs-phi-indol.vercel.app",
+    url: "https://souravramesh.com",
     siteName: "Sourav Ramesh Portfolio",
     images: [
       {
