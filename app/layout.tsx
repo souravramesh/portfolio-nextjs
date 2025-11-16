@@ -1,20 +1,36 @@
-import type React from "react"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+import type React from "react";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio - Designer & Developer",
-  description: "A minimalist portfolio showcasing design and development work",
-    generator: 'v0.app'
-}
+  title: "Sourav Ramesh | Mobile App Developer",
+  description:
+    "A minimalist portfolio showcasing my React Native apps and development projects.",
+  metadataBase: new URL("https://portfolio-nextjs-phi-indol.vercel.app"),
+  openGraph: {
+    title: "Sourav Ramesh | Mobile App Developer",
+    description:
+      "Explore my portfolio featuring React Native apps and development projects.",
+    url: "https://portfolio-nextjs-phi-indol.vercel.app",
+    siteName: "Sourav Ramesh Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -22,5 +38,5 @@ export default function RootLayout({
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
