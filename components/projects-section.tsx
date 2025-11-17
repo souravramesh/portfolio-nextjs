@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ExternalLink, Github, Play } from "lucide-react";
+import Image from "next/image";
 
 export function ProjectsSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -44,7 +45,7 @@ export function ProjectsSection() {
         "Managed global state with Redux and optimized overall app performance",
       ],
       playStore:
-      "https://play.google.com/store/apps/details?id=com.woodenclouds.oxikart",
+        "https://play.google.com/store/apps/details?id=com.woodenclouds.oxikart",
       demoLink: "",
       githubLink: "",
     },
@@ -53,7 +54,7 @@ export function ProjectsSection() {
       tags: ["React Native", "Firebase", "Cashfree", "Realtime Database"],
       image: "/oneruppee.png",
       description:
-      "Oneruppee is a feature-rich e-commerce mobile application designed to revolutionize the online shopping experience by combining traditional product listings with an interactive bidding system.",
+        "Oneruppee is a feature-rich e-commerce mobile application designed to revolutionize the online shopping experience by combining traditional product listings with an interactive bidding system.",
       highlights: [
         "Upgraded the app from an older React Native version and refactored UI and codebase for stability",
         "Fixed and improved the entire checkout flow (Buy Now & Add to Cart) and integrated Cashfree PG",
@@ -61,7 +62,7 @@ export function ProjectsSection() {
         "Fixed and enhanced the bidding feature, integrating Firebase Realtime DB for live bidding",
       ],
       playStore:
-      "https://play.google.com/store/apps/details?id=com.orgecom.oneruppee",
+        "https://play.google.com/store/apps/details?id=com.orgecom.oneruppee",
       demoLink: "",
       githubLink: "",
     },
@@ -123,9 +124,15 @@ export function ProjectsSection() {
               style={{ transitionDelay: `${(index + 1) * 100}ms` }}
             >
               <div className="relative overflow-hidden rounded-lg mb-4 bg-muted aspect-3/2">
-                <img
+                {/* <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                /> */}
+                <Image
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  fill
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
@@ -144,9 +151,9 @@ export function ProjectsSection() {
                 </p>
                 <ul className="text-sm text-foreground/70 space-y-1">
                   {project.highlights.map((highlight, i) => (
-                    <li key={i} className="flex items-start gap-2">
+                    <li key={i} className="flex gap-2">
                       <span className="text-muted-foreground mt-1">•</span>
-                      <span>{highlight}</span>
+                      <span className="mt-1">{highlight}</span>
                     </li>
                   ))}
                 </ul>
