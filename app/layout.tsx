@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   description:
     "A minimalist portfolio showcasing my React Native apps and development projects.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
   metadataBase: new URL("https://souravramesh.com"),
